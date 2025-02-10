@@ -1,0 +1,52 @@
+:root {
+    --white : #FBF5F3;
+    --night : #000022;
+    --grass : #59CD90;
+    --day : #3FA7D6;
+}
+
+main {
+    display: grid;
+    position: relative;
+    grid-template-columns: 320px 1fr;
+    margin: 40px;
+}
+
+aside, #weather-forecast {
+    background-color: var(--white);
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+aside {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    width: 250px;
+    height: 200px;
+    padding: 10px;
+}
+
+div, h1 {
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 10px;
+}
+
+#searchbar {
+    padding: 6px;
+}
+
+#search {
+    margin-left: -5px;
+    height: 30px;
+    width: fit-content;
+}
+
+#weather-forecast {
+    background-color: var(--white);
+    border: 1px solid black;
+    height: 620px;
+}
