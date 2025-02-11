@@ -5,25 +5,39 @@
     --day : #3FA7D6;
 }
 
+body {
+    background-image: url("img/bg.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+}
+
 main {
     display: grid;
     position: relative;
-    grid-template-columns: 320px 1fr;
+    grid-template-columns: 350px 1fr;
     margin: 40px;
 }
 
-aside, #weather-forecast {
-    background-color: var(--white);
+aside {
+    background-color: rgba(255, 255, 255, 0.555);
+    backdrop-filter: blur(10px);
     border: 1px solid black;
     border-radius: 25px;
 }
 
 aside {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    width: 250px;
-    height: 200px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: fit-content;
     padding: 10px;
+    align-items: center;
+    gap: 10px;
+}
+
+aside img {
+    width: 84px;
 }
 
 div, h1 {
@@ -46,7 +60,29 @@ h1 {
 }
 
 #weather-forecast {
-    background-color: var(--white);
+    width: 100%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#weather-forecast div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.555);
+    backdrop-filter: blur(10px);
     border: 1px solid black;
-    height: 620px;
+    border-radius: 20px;
+    height: 150px;
+}
+
+#weather-forecast img {
+    width: 48px;
+}
+
+#description, #location #temperature {
+    text-align: center;
+    max-width: 300px;
+
 }
