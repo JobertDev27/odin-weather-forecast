@@ -86,3 +86,9 @@ h1 {
     max-width: 300px;
 
 }
+
+footer {
+    color: var(--white);
+    position: absolute;
+    bottom: 15px;
+}
